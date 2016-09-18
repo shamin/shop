@@ -38,7 +38,7 @@ render("sidenav");
                     <tr class="item-row">
                         <td><span class="id">1</span></td>
                         <td><input class="name" type="text" placeholder="Name"></td>
-                        <td><span class="cost">0</span></td>
+                        <td><span class="cost">5</span></td>
                         <td><input class="qty" type="number" placeholder="0"></td>
                         <td><span class="price">0</span></td>
                         <td><a class="delete" href="javascript:;" title="Remove row">X</a></td>

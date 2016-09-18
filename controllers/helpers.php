@@ -28,5 +28,9 @@ class helpers extends Db {
         $sql = "SELECT * FROM `item` WHERE (CONVERT(`name` USING utf8) LIKE '%$data%')";
         return $this->select($sql);
     }
+    public function searchid($data) {
+        $sql = "SELECT * FROM `item` WHERE `id` = $data";
+        return $this->select($sql);
+    }
 
 }
