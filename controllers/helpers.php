@@ -23,6 +23,10 @@ class helpers extends Db {
             return false;
         }
     }
+     public function getitems() {
+        $sql = "SELECT * FROM `item`";
+        return $this->select($sql);
+    }
 
     public function search($data) {
         $sql = "SELECT * FROM `item` WHERE (CONVERT(`name` USING utf8) LIKE '%$data%')";
@@ -31,6 +35,18 @@ class helpers extends Db {
     public function searchid($data) {
         $sql = "SELECT * FROM `item` WHERE `id` = $data";
         return $this->select($sql);
+    }
+    public function billno() {
+        $sql = "SHOW TABLE STATUS LIKE 'billno'";
+        return $this->select($sql)[0]['Auto_increment'];
+    }
+    public function newbill() {
+        $sql = "INSERT INTO `billno`(`BillName`) VALUES ('Bill')";
+        return $this->query($sql);
+    }
+    public function savebillitem($billno,$productid,$qty) {
+        $sql = "INSERT INTO `billitems` (`billno`, `productid`, `qty`) VALUES ('$billno', '$productid', '$qty');";
+        return $this->query($sql);
     }
 
 }

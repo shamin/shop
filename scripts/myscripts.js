@@ -11,7 +11,6 @@ $("#addrow").click(function () {
     $(".item-row:last").after(newitem);
     if ($(".delete").length > 0)
         $(".delete").show();
-    bind();
 });
 //Delete an item row
 $(document.body).on('click', '.delete', function () {
@@ -67,12 +66,11 @@ $("#results").on('click', "a", function () {
 
     var row = $('.item-row').eq(rowno);
     var slno = row.find('.id').text();
-    
+
     var itemid = $(this).attr('data-id');
-    
+
 
     var formvalues = "&id=" + itemid + "&slno=" + slno;
-    console.log(formvalues);
     $.ajax({
         type: 'POST',
         url: 'getitemdetails.php',
@@ -87,5 +85,40 @@ $("#results").on('click', "a", function () {
     });
     clearresults();
 });
+
+$('#save').click(function () {
+    $.ajax({
+        type: 'POST',
+        url: 'savebill.php',
+        data: null,
+        beforeSend: function (html) {
+            $('.progress').show();
+        },
+        success: function (html) {
+            $('.progress').hide();
+            saveallitems();
+        }
+    });
+});
+function saveallitems()
+{
+    var billno = $("#billno").text();
+    $('.item-row').each(function () {
+        var productid = $(this).find('.id').attr('data-id');
+        var qty = $(this).find('.qty').val();
+        var formvalues = "&productid=" + productid + "&qty=" + qty + "&billno=" + billno;
+        $.ajax({
+            type: 'POST',
+            url: 'savebillitems.php',
+            data: formvalues,
+            beforeSend: function (html) {
+                $('.progress').show();
+            },
+            success: function (html) {
+                $('.progress').hide();
+            }
+        });
+    });
+}
 
 
