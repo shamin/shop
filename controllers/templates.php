@@ -8,7 +8,7 @@
 
 function render($template,$data=array())
 {
-    $path = '/templates/'.$template.'.php';
+    $path = './templates/'.$template.'.php';
     extract($data);
     require($path);
 }
