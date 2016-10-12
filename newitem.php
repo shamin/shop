@@ -7,46 +7,28 @@ if (isset($_POST["name"]) && isset($_POST["stock"]) && isset($_POST["price"])) {
     $return = $helper->newitem($_POST["name"], $_POST["stock"], $_POST["price"]);
 }
 render("header");
-render("topnav", array('pagetitle' => 'Add New Item'));
 render("sidenav");
 ?> 
-<main>
-    <?php
+<div class="main-body">
+    <div class="main-body-header">
+        <h1>Add new item</h1>
+    </div>
+    <section id="newitem" class="container">
+        <form class="inputform" action="#" method="post">
+            <input type="text" name="name" placeholder="Item Name" required><br>
+            <input type="number" name="stock" placeholder="Stock" required><br>
+            <input type="number" name="price" step="0.01" placeholder="Price" required><br>
+            <button class="newbtn" type="submit">Add</button>
+        </form>
+    </section>
+</div>
+<?php render("footer") ?>
+<?php
     if (isset($return)) {
         if ($return) {
-            echo "Item Added Successfully";
+            echo '<script> alert("Item Added Succesfully");</script>';
         } else {
-            echo "Cant add item";
+            echo '<script> alert("Cant Add Item");</script>';
         }
     }
-    ?>
-    <div class="row">
-        <form class="col s12" action="#" method="post">
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="name" type="text" class="validate" name="name">
-                    <label for="last_name">Item Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="stock" type="number" class="validate" name="stock">
-                    <label for="stock">Stock</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input id="price" type="number" step="0.01" class="validate" name="price">
-                    <label for="price">Price</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <button class="btn waves-effect waves-light" type="submit">Save</button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-</main>
-<?php render("footer") ?>      
+?>     

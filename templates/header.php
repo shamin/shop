@@ -1,15 +1,20 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<!Doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-        <link href="css/materialize.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <head> 
+        <title>
+            DashBoard : Shop
+        </title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <header>
+            <div class="nav-wrapper">
+                <nav class="top-nav">
+                    <div class="nav-header">
+                        <a>Shop</a>
+                    </div>
+                    <ul></ul>
+                </nav>
+            </div>
+        </header>
         
