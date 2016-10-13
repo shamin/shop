@@ -63,6 +63,10 @@ $header = array('Item Name', 'Price', 'Quanity', 'Total');
 $datas = $helper->getbill($billno);
 $pdf->SetFont('Arial','',14);
 $pdf->AddPage();
+$pdf->Cell(100,15,'Bill No: '.$billno);
+$date = strtotime($datas[0]['date']);
+$pdf->Cell(0,15,'Date: '.date('d-F-Y',$date));
+$pdf->Ln();
 $pdf->ImprovedTable($header,$datas);
-$pdf->Output();
+$pdf->Output("D",'Bill No: '.$billno.".pdf");
 ?>

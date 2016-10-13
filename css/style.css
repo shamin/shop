@@ -340,3 +340,17 @@ input[type=text]:focus , input[type=number]:focus{
     width: 20%; 
 }
 
+.priceBtn,.stockBtn{
+    cursor: pointer;
+    
+}
+.priceBtn:hover, .stockBtn:hover{
+    color: #fff;
+}
+
+.dashboard-header{
+    text-align: center;
+    color: #2aa890;
+    font-size: 3em;
+    margin-bottom: 30px;
+}

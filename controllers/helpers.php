@@ -45,7 +45,15 @@ class helpers extends Db {
     }
     public function searchid($data) {
         $sql = "SELECT `id`,`name`,price.price FROM `item`,price WHERE `id` = $data AND item.id = price.productid";
-        return $this->select($sql);
+        $newdatas = array();
+        $datas = $this->select($sql);
+        foreach ($datas as $data){
+            $date = date("Y-m-d"); 
+            $data["stock"] = $this->gettotalstock($data["id"],$date);
+            $data["price"] = $this->getlatestprice($data["id"],$date);   
+            $newdatas[] = $data;
+        }
+        return $newdatas;
     }
     public function billno() {
         $sql = "SHOW TABLE STATUS LIKE 'billno'";
