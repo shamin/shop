@@ -1,5 +1,5 @@
 $("#addrow").click(function () {
-    var newitem = '<tr class="item-row"><td><span class="id">' + ($(".item-row").length + 1) + '</span></td><td><input class="name" type="text" placeholder="Name"></td><td><span class="cost">0</span></td><td><input class="qty" type="number" placeholder="0"></td><td><span class="price">1</span></td><td><a class="delete" href="javascript:;" title="Remove row">X</a></td></tr>';
+    var newitem = '<tr class="item-row"><td><span class="id">'+ ($(".item-row").length + 1) +'</span></td><td><input type="text" class="form-control name" ></td><td><span class="cost">0</span></td><td><input type="text" class="form-control qty" ></td><td><span class="price">0</span></td><td><a class="delete" href="javascript:;" title="Remove row">X</a></td></tr>';
     $(".item-row:last").after(newitem);
     if ($(".delete").length > 0)
         $(".delete").show();

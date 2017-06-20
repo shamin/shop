@@ -93,7 +93,7 @@ class helpers extends Db {
     }
     public function newprice($id,$price) {
         $date = date("Y-m-d"); 
-        $sql = "INSERT INTO `price` (`productid`, `price`, `date`) VALUES ('$id', '$price', '$date')";
+        $sql = "INSERT INTO `price`(`productid`, `price`, `date`) VALUES ('$id', '$price', '$date')";
         return $this->query($sql);
     }
     public function gettotalstock($id,$date)

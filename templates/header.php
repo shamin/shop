@@ -1,20 +1,28 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-    <head> 
-        <title>
-            DashBoard : Shop
-        </title>
-        <link href="css/style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <header>
-            <div class="nav-wrapper">
-                <nav class="top-nav">
-                    <div class="nav-header">
-                        <a>Shop</a>
-                    </div>
-                    <ul></ul>
-                </nav>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">SHOP</a>
             </div>
-        </header>
+            <ul class="nav navbar-nav">
+              <li><a href="index.php">Dashboard</a></li>
+              <li><a href="newitem.php">Add New Item</a></li>
+              <li><a href="newbill.php">New Bill</a></li>
+              <li><a href="viewbills.php">View Bills</a></li>
+              <li><a href="viewitems.php">View Items</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
         

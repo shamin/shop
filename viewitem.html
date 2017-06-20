@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">SHOP</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="newitem.html">Add</a></li>
+              <li><a href="newbill.html">New</a></li>
+              <li><a href="#">Edit</a></li>
+              <li><a href="viewbill.html">View</a></li>
+              <li><a href="viewitem.html">View Item</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section id="viewitem">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 main-head">
+            <h1 class="text-center">View Item</h1>
+          </div>
+        </div>
+        <table class="table table-hover">
+         <thead>
+           <tr>
+             <th>Sl No</th>
+             <th>Item Name</th>
+             <th>Stock</th>
+             <th>Price</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>John</td>
+             <td>Doe</td>
+             <td>john@example.com</td>
+             <td>john@example.com</td>
+             <td><a data-toggle="modal" data-target="#priceModal">price</a></td>
+             <td><a data-toggle="modal" data-target="#stockModal">stock</a></td>
+           </tr>
+           <tr>
+             <td>Mary</td>
+             <td>Moe</td>
+             <td>mary@example.com</td>
+             <td>john@example.com</td>
+             <td><a data-toggle="modal" data-target="#priceModal">price</a></td>
+             <td><a data-toggle="modal" data-target="#stockModal">stock</a></td>
+           </tr>
+           <tr>
+             <td>July</td>
+             <td>Dooley</td>
+             <td>july@example.com</td>
+             <td>john@example.com</td>
+             <td><a data-toggle="modal" data-target="#priceModal">price</a></td>
+             <td><a data-toggle="modal" data-target="#stockModal">stock</a></td>
+           </tr>
+
+         </tbody>
+       </table>
+     </div>
+     <div id="priceModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Enter New Price</h4>
+            </div>
+            <div class="modal-body">
+              <input type="text" class="form-control" name="" value="" placeholder="Price">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Update</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+        <div id="stockModal" class="modal fade" role="dialog">
+           <div class="modal-dialog">
+
+             <!-- Modal content-->
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h4 class="modal-title">Enter New Stock</h4>
+               </div>
+               <div class="modal-body">
+                 <input type="text" class="form-control" name="" value="" placeholder="Stock">
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Update</button>
+               </div>
+             </div>
+
+           </div>
+         </div>
+    </section>
+    <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8"></script>
+  </body>
+</html>

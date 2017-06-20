@@ -7,21 +7,31 @@ if (isset($_POST["name"]) && isset($_POST["stock"]) && isset($_POST["price"])) {
     $return = $helper->newitem($_POST["name"], $_POST["stock"], $_POST["price"]);
 }
 render("header");
-render("sidenav");
 ?> 
-<div class="main-body">
-    <div class="main-body-header">
-        <h1>Add new item</h1>
+<section id="newitem">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 main-head">
+          <h1 class="text-center">Add New Item</h1>
+        </div>
+      </div>
+      <form class="form" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Item Name:</label>
+              <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="stock">Item Stock:</label>
+              <input type="text" class="form-control" id="stock" name="stock">
+            </div>
+            <div class="form-group">
+              <label for="stock">Item Price:</label>
+              <input type="text" class="form-control" id="price" name="price">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+      </form>
     </div>
-    <section id="newitem" class="container">
-        <form class="inputform" action="#" method="post">
-            <input type="text" name="name" placeholder="Item Name" required><br>
-            <input type="number" name="stock" placeholder="Stock" required><br>
-            <input type="number" name="price" step="0.01" placeholder="Price" required><br>
-            <button class="newbtn" type="submit">Add</button>
-        </form>
-    </section>
-</div>
+</section>
 <?php render("footer") ?>
 <?php
     if (isset($return)) {

@@ -7,7 +7,7 @@ class db {
     {
         $hostname = 'localhost';
         $username = 'root';
-        $pass = 'root';
+        $pass = '';
         $database = 'shop';
         
   

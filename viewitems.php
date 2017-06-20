@@ -4,61 +4,85 @@ include_once 'controllers/templates.php';
 
 $helper = new helpers();
 render("header");
-render("sidenav");
 $datas = $helper->getitems();
 ?> 
-<div class="main-body">
-    <div class="main-body-header">
-        <h1>Items</h1>
+
+<section id="viewitem">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 main-head">
+        <h1 class="text-center">View Items</h1>
+      </div>
     </div>
-    <section id="newbill">
-        <div class="table">
-            <table id="item-table">
-                <thead>
-                    <tr>
-                        <th>Sl.No</th>
-                        <th>Item Name</th>
-                        <th>Stock</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>                       
-                        <?php foreach ($datas as $data): ?>
-                        <tr>
-                            <td><?php echo $data['id']?></td>
-                            <td><?php echo $data["name"]?></td>
-                            <td><?php echo $data["stock"]?></td>
-                            <td><?php echo $data["price"]?></td>
-<!--                            <td><a id="myBtn" href="edititem.php?id=<?php echo $data["id"]?>">Edit</a></td>-->
-                            <td><a data-id="<?php echo $data["id"]?>" class="priceBtn" >Price</a></td>
-                            <td><a data-id="<?php echo $data["id"]?>" class="stockBtn" >Stock</a></td>
-                        </tr>
-                        <?php endforeach; ?>
-                </tbody>
-            </table>
+    <table class="table table-hover">
+     <thead>
+       <tr>
+         <th>Sl No</th>
+         <th>Item Name</th>
+         <th>Stock</th>
+         <th>Price</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+        <?php foreach ($datas as $data): ?>
+        <tr>
+            <td><?php echo $data['id']?></td>
+            <td><?php echo $data["name"]?></td>
+            <td><?php echo $data["stock"]?></td>
+            <td><?php echo $data["price"]?></td>
+            <!--                            <td><a id="myBtn" href="edititem.php?id=<?php echo $data["id"]?>">Edit</a></td>-->
+            <td><a data-id="<?php echo $data["id"]?>" class="priceBtn" >Edit Price</a></td>
+            <td><a data-id="<?php echo $data["id"]?>" class="stockBtn" >Edit Stock</a></td>
+        </tr>
+        <?php endforeach; ?>
+       </tr>
+
+     </tbody>
+   </table>
+ </div>
+
+ <div id="priceModal" class="modal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Enter New Price</h4>
         </div>
-    </section>
-</div>
-<div id="priceModal" class="modal">
-  <div class="modal-content">
-    <span class="close"></span>
-    <h3 style="color:#fff;">Enter the new Price</h3>
-    <div class="inputform" style="padding: 0;"> 
-        <input type="number" name="price" step="0.01" placeholder="Price" style="width: 90%;" required><br>
-        <button id="updatePrice" class="newbtn" style="width: 90%;" type="submit">Update</button>
+        <div class="modal-body">
+          <input type="text" class="form-control" name="price" value="" placeholder="Price">
+        </div>
+        <div class="modal-footer">
+          <button id="updatePrice" type="button" class="btn btn-default" data-dismiss="modal">Update</button>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
-<div id="stockModal" class="modal">
-  <div class="modal-content">
-    <span class="close"></span>
-    <h3 style="color:#fff;">Enter the new Stock</h3>
-    <div class="inputform" style="padding: 0;"> 
-        <input type="number" name="stock" placeholder="Stock" style="width: 90%;" required><br>
-        <button id="updateStock" class="newbtn" style="width: 90%;" type="submit">Update</button>
-    </div>
-  </div>
-</div>
+
+    <div id="stockModal" class="modal" role="dialog">
+       <div class="modal-dialog">
+
+         <!-- Modal content-->
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal">&times;</button>
+             <h4 class="modal-title">Enter New Stock</h4>
+           </div>
+           <div class="modal-body">
+             <input type="text" class="form-control" name="stock" value="" placeholder="Stock">
+           </div>
+           <div class="modal-footer">
+             <button id="updateStock" type="button" class="btn btn-default" data-dismiss="modal">Update</button>
+           </div>
+         </div>
+
+       </div>
+     </div>
+</section>
+
 <script src="scripts/jquery-3.1.0.min.js" type="text/javascript"></script>
 <script>
     var priceModal = document.getElementById('priceModal');
@@ -119,4 +143,6 @@ $datas = $helper->getitems();
         });
     });
 </script>   
+
+
 <?php render("footer") ?>     

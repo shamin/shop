@@ -1,356 +1,189 @@
 body
 {
-    background: #323232;
+  background: #ffff;
+  color: #3a4348;
 }
-body,div,section,header,nav,ul,li,footer
+.qty 
 {
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-    font-family: helvetica;
+  width: 100px;
 }
-h1,h2,h3,h4,h5,h6
+.navbar-default
 {
-    padding: 0;
-    border: 0;
-    margin:0;
+  background-color: #fff;
 }
-li,ul
+.navbar-default .navbar-brand
 {
-    list-style: none;
+  padding: 30px;
+  color: #3a4348;
+  font-weight: bold;
 }
-a
+.navbar-default .navbar-nav li a{
+  color: #3a4348;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 30px;
+}
+.navbar-default .navbar-nav li
 {
-    text-decoration: none;
-    color: #2aa890;
+  border-right: 0.1em solid #e7e7e7;
+  border-left: 0.1em solid #e7e7e7;
 }
-header{
-    position: fixed;
-    height: 50px;
-    width: 100%;
+#overview
+{
+ padding-top: 25vh;
 }
-.side-nav{
-    padding-top: 0px;
-    margin-top: 55px;
-    width: 188px;
-    height: 100%;
-    background: #2a2a2a;
-    position: fixed;
-    box-shadow: 3px 0px 2px #2a2a2a;
-}
-.side-nav ul{
-    padding: 0;
+#overview .main_icons
+{
+  padding: 50px;
+  font-size: 3em;
+  background: #fff;
 
 }
-.side-nav ul li
+#newitem
 {
-    padding: 15px;
-    padding-left: 3em;
-
+padding-top: 20vh;
+}
+#newitem .container
+{
+  padding-left: 150px;
+  padding-right: 150px;
+}
+#newitem input
+{
+  height: 50px;
+  border-radius: 0;
+  margin-bottom: 20px;
 
 }
-.side-nav ul .heads
+#newitem input:focus
 {
-    border-bottom: 2px solid #212020;
-}
-.side-nav ul :hover
-{
-    color: #2aa890;
-    border-right: 4px solid #2aa890;
-    background: #222222;
+  border-color: #e53748;
+  box-shadow: none;
 
 }
-.side-nav ul :active
+#newitem label
 {
-    color: #2aa890;
-    border-right: 4px solid #2aa890;
-    background: #222222;
-
+  font-weight: lighter;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 25px;
 }
-.side-nav ul li :hover
+.main-head
 {
-    border:0;
-    background: #222222;
-
+  padding-bottom: 50px;
+  text-transform: uppercase;
 }
-.side-nav ul li a
+#newitem button
 {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 14px;
+  margin-top: 30px;
+  width: 100px;
+  height: 50px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+  border-color: #e53748;
+  font-weight: lighter;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 25px;
 }
-
-.top-nav
+#newitem button:hover
 {
-
-    height: 52px;
-    max-width: 1024px;
-
-
+  background: #e53748;
+  color: #fff;
 }
-.top-nav li
+#viewitem
 {
-    float: right;
-    padding: 10px;
-
-
+padding-top: 30vh;
 }
-
-.nav-header
+#viewitem a
 {
-    padding-left: 10px;
-
-    text-transform: uppercase;
-    float: left;
-    padding-top: 16px;
-    font-size: 20px;
-    height: 30px;
+  text-decoration: none;
 }
-.nav-wrapper
+#viewitem a:hover
 {
-    width: 100%;
-    border-bottom: 2px solid #212020;
-    background: #2a2a2a;
-    color: #2aa890;
+    cursor: pointer;
 }
-.main-body
+#viewitem .container
 {
-    float: left;
-    width: 100%;
-    margin-top: 55px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
-.main-body .main-body-header h1
+table th
+  {
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 25px;
+  }
+table td
 {
-
-    color: #2aa890;
-    text-transform: uppercase;
-    font-size: 14px;
-    padding: 15px;
-    padding-left:220px;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  line-height: 25px;
 }
-.main-body-header
+#priceModal .modal-content,#stockModal .modal-content
 {
-    height: 100%;
-
-    box-shadow: 3px 2px 3px #2a2a2a;
-}
-.container
-{
-    margin-left: 220px;
-    padding-top: 10px;
-    margin-right: 30px;
+  border-radius: 0px;
+  border: none;
 }
 #newbill
 {
-    margin-left: 220px;
-    padding-top: 10px;
-    margin-right: 30px;
+  padding-top: 30vh;
+}
+#newbill input
+{
+  border-radius: 0;
+  margin-bottom: 20px;
 
 }
-.newbtn
+#newbill input:focus
 {
-    padding: 10px;
-    font-size: 14px;
-    border-color: #2aa890;
-    background: transparent;
-    color: #fff;
-    border-radius: 4px;
-}
-.button
-{
-    padding-top: 10px;
-}
-.button a
-{
-    color: #2aa890;
-}
-.button a:hover
-{
-    color: #fff;
-}
-.savebtn
-{
-    float: right;
-    margin-right: 55px;
-    padding: 10px 25px;
-    font-size: 14px;
-    border-color: #2aa890;
-    background: #2aa890;
-    border-radius: 4px;
-}
-.savebtn a
-{
-    color: #fff;
-}
-table{
-    margin-top: 30px;
-    float: left;
-}
-#item-table
-{
-    font-family: Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 70%;
-}
-#item-table td, #item-table th {
-    box-shadow: 3px 2px 3px #2a2a2a;
-    padding: 8px;
-}
-#item-table tr
-{
-    font-weight: lighter;
-    background-color:transparent;
-    color: #fff;
-}
-#item-table th {
-    font-weight: lighter;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #2aa890;
-    color: white;
-}
-.search{
-    float: right;
-    width: 20%;
-    margin-top: 30px;
-    padding: 10px;
-    background: transparent;
-    box-shadow: 3px 2px 3px #2a2a2a;
-    
-}
-.search li a
-{
-    color:#2aa890;
-    
-}
-.search li
-{
-    padding-top:10px;
-    padding-bottom: 10px;
-    
-}
-.close a
-{
-    text-align: center;
-    color: #2aa890;
-    padding: 2px;
-}
-.close a:hover
-{
-    color: #fff;
-    background: #2aa890;
-    border-radius: 100px;
-}
-#newitem .item{
-    padding: 20px;
-}
-#newbill input[type=text],#newbill input[type=number]
-{
-    border: 0;
-    margin: 0;
-    background: transparent;
-    border-radius: 0;
-    outline: none;
-    height: 2rem;
-    box-shadow: none;
-    color: #fff;
-}
-#newbill input[type=number]{
-    width: 20%;
-}
-#newbill input[type=text]:focus ,#newbill input[type=number]:focus
-{
-    border-bottom: 1px solid #2aa890;
-}
-.inputform
-{
-    padding-left: 100px;
-    padding-top: 20px;
-}
-.inputform input[type=text] ,.inputform input[type=number]
-{
-    border : 1px solid #2aa890;
-    padding: 0.5em;
-    font-size: 18px;
-    line-height: 1.2em;
-    width: 30%;
-    background: #444;
-    color: #fff;
-    font-family: helvetica, sans-serif;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.12, #424242));
-	background: -moz-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.12, #424242));
-	background: -o-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.12, #424242));
-	background: -ms-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.12, #424242));
-	background:  gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.12, #424242));
-    -webkit-appearance: none;
-    /*box-shadow*/
-    -webkit-box-shadow: 1px 1px 1px #333;
-    -moz-box-shadow: 1px 1px 1px #333;
-    box-shadow: 1px 1px 1px #333;
-    margin-top: 30px;
-}
-input[type=text]:focus , input[type=number]:focus{
-    outline: 0;
-    border : 1px solid #2196f3;
-}
-.inputform button
-{
-    margin-top: 30px;
-    width: 31.5%;
-   background: #2aa890;
-   color: #fff;
-   font-size: 18px;
-   text-transform: uppercase;
-   font-weight: bold;
-   outline: 0;
-}
+  border-color: #e53748;
+  box-shadow: none;
 
-.inputform button:hover
+}
+#newbill .container
 {
-    color: #fff;
-    background: #2196f3;
-    cursor: pointer;
+  padding-left: 50px;
+  padding-right: 50px;
 }
-.inputform button:hover:before
+#newbill button
 {
-    content: '+ ';  
+  margin-left: 20px;
+  margin-top: 30px;
+  width: 150px;
+  height: 40px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+  border-color: #e53748;
+  font-weight: lighter;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 25px;
 }
-
-
-
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4);
+#newbill .col-md-offset-6
+{
+  text-align: right !important;
 }
-
-.modal-content {
-    background-color: #2f2f2f;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 20%; 
+#newbill button:hover
+{
+  background: #e53748;
+  color: #fff;
 }
+#viewbill
+{
+  padding-top:30vh;
 
-.priceBtn,.stockBtn{
-    cursor: pointer;
-    
 }
-.priceBtn:hover, .stockBtn:hover{
-    color: #fff;
-}
+#viewbill .container
+{
+  padding-left: 150px;
+  padding-right: 150px;
 
-.dashboard-header{
-    text-align: center;
-    color: #2aa890;
-    font-size: 3em;
-    margin-bottom: 30px;
+}
+.main-head
+{
+  color: #e53748;
 }

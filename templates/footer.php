@@ -1,3 +1,4 @@
-        <script src="scripts/jquery-3.1.0.min.js" type="text/javascript"></script>
-    </body>
+    <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8"></script>
+  </body>
 </html>
