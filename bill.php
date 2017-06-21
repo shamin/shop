@@ -11,8 +11,8 @@ class PDF extends FPDF
     function Header()
     {
         $this->SetFont('Arial','B',15);
-        $this->Cell(80);
-        $this->Cell(30,10,'Estimate',1,0,'C');
+        $this->Cell(60);
+        $this->Cell(70,10,'New Oil Stores',1,0,'C');
         $this->Ln(20);
     }
     function LoadData($file)
@@ -28,7 +28,7 @@ class PDF extends FPDF
     function ImprovedTable($header, $data)
     {
         $total = 0;
-        $w = array(40, 35, 40, 45);
+        $w = array(100, 25, 25, 25);
         for($i=0;$i<count($header);$i++)
         {
             $this->Cell($w[$i],7,$header[$i],1,0,'C');

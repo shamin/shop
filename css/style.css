@@ -94,11 +94,18 @@ padding-top: 20vh;
 }
 #viewitem
 {
-padding-top: 30vh;
+padding-top: 10vh;
 }
 #viewitem a
 {
   text-decoration: none;
+}
+@media print
+{
+	#viewitem a
+	{
+		display:none;
+	}
 }
 #viewitem a:hover
 {
@@ -130,12 +137,13 @@ table td
 }
 #newbill
 {
-  padding-top: 30vh;
+  padding-top: 20vh;
+  padding-bottom: 50px;
 }
 #newbill input
 {
   border-radius: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 
 }
 #newbill input:focus

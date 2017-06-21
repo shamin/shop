@@ -11,9 +11,10 @@ $datas = $helper->getitems();
   <div class="container">
     <div class="row">
       <div class="col-md-12 main-head">
-        <h1 class="text-center">View Items</h1>
+        <h3 class="text-center">Items List</h3>
       </div>
     </div>
+    <button type="button" class="btn btn-default" ><a onclick="window.print()">Print Bill</a></button>
     <table class="table table-hover">
      <thead>
        <tr>
